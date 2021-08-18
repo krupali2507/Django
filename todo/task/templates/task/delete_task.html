@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'task/style.css' %}">
+<div class="center-column">
+    <p>Are you sure you want to delete {{item}} ?</p>
+
+    <a class="btn btn-info" href="{% url 'list' %}">Cancel</a>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" name="Confirm">
+
+    </form>
+</div>
